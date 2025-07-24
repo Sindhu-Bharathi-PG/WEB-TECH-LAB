@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio - Your Name</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #0d6efd;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="bg-primary text-white text-center py-5 mb-5">
+       <div class="text-start mx-5">
+  <button class="btn btn-dark w-5 fs-3 rounded-5" onclick="location.href='home.html'"><</button>
+</div>
+
+        <img src="assets/profile.jpg" alt="name" class="profile-img w-10" />
+        <h1 class="fw-bold">P.G.SINDHU BHARATHI</h1>
+        <p class="lead">Web Developer & Designer</p>
+    </header>
+
+    <main class="container">
+        <section class="mb-5">
+            <h2>About Me</h2>
+            <p>
+                Passionate web developer with experience in building responsive, user-friendly websites and
+                applications.
+                Skilled in HTML, CSS, JavaScript, and Bootstrap.
+                Also about a Database Designer.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="mb-4">My Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="assets/proj1.jpg" class="card-img-top project-img " alt="Project 1" />
+                        <div class="card-body">
+                            <h5 class="card-title">Skill Analyser Using MCQ</h5>
+                            <p class="card-text">Using HTML, CSS, Js and Bootstrap</p>
+                            <a href="#" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="assets/proj2..jpg" class="card-img-top project-img" alt="Project 2" />
+                        <div class="card-body">
+                            <h5 class="card-title">Project Two</h5>
+                            <p class="card-text">Portfolio site designed with Bootstrap and CSS.</p>
+                            <a href="#" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="assets/proj3.png" class="card-img-top project-img" alt="Project 3" />
+                        <div class="card-body">
+                            <h5 class="card-title">Project Three</h5>
+                            <p class="card-text">Task manager app using Vue.js and Firebase.</p>
+                            <a href="#" class="btn btn-primary btn-sm" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="mt-5 text-center">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out!</p>
+            <div class="fs-4">
+                <a href="mailto:youremail@example.com" class="text-decoration-none me-3" title="Email">
+                    <i class="bi bi-envelope-fill"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-decoration-none me-3"
+                    title="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/yourgithub" target="_blank" class="text-decoration-none me-3"
+                    title="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://twitter.com/yourtwitter" target="_blank" class="text-decoration-none" title="Twitter">
+                    <i class="bi bi-twitter"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS Bundle (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
