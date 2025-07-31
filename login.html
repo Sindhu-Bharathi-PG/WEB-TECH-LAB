@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bookstore Login</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body,
+    .container-fluid,
+    .row {
+      height: 100vh;
+    }
+
+    .left-side {
+      position: relative;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      overflow: hidden;
+      /* hide overflow of blur */
+    }
+
+    /* Background image in ::before */
+    .left-side::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      /* shorthand for top:0; right:0; bottom:0; left:0; */
+      background: url('assets/book_red.jpg') no-repeat center center;
+      background-size: cover;
+      filter: blur(2px);
+      z-index: 0;
+    }
+
+    /* Content (form) above background */
+    .form-container {
+      position: relative;
+      /* to place above ::before */
+      z-index: 1;
+      background: rgba(136, 163, 175, 0.7);
+      border-radius: 15px;
+      padding: 2.5rem;
+      max-width: 500px;
+      width: 450px;
+      ;
+      height: 500px;
+      color: #3e2f1c;
+      backdrop-filter: blur(5px);
+      /* optional */
+      -webkit-backdrop-filter: blur(5px);
+    }
+
+
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #6c4f3d;
+    }
+
+    .btn-primary {
+      background-color: #6c4f3d;
+      border-color: #6c4f3d;
+    }
+
+    .btn-primary:hover {
+      background-color: #503a2a;
+      border-color: #503a2a;
+    }
+
+    h2 {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      height: 60px;
+      width: 60px;
+    }
+
+
+    @media (max-width: 768px) {
+
+      /* On smaller screens, show form full width without image */
+      .left-side {
+        height: auto;
+        padding: 2rem 1rem;
+      }
+
+      .form-container {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <div class="row g-0">
+
+      <div class="col-12 left-side">
+        
+        <div class="form-container">
+          <img src="assets/logo.png" alt="Bookstore Logo" class="logo" />
+          <h2 class="text-center">Welcome to BookNest</h2>
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email or Username</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                <input type="text" class="form-control" id="email" placeholder="Enter your email or username"
+                  required />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password" required />
+              </div>
+            </div>
+            <div class="d-grid mt-5">
+              <button type="submit" class="btn btn-primary">Log In</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
