@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete HTML Tags Reference</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --accent-color: #7209b7;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --success-color: #2ec4b6;
+            --warning-color: #ff9f1c;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e4f5 100%);
+            font-family: 'Manrope', sans-serif;
+            padding: 2rem 1rem;
+            color: var(--dark-color);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: #5a6268;
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+        }
+
+        .tag-category {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding: 0.75rem 1.25rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.35rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .tag-category i {
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(200, 200, 200, 0.3);
+            padding: 1.5em;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .card-title i {
+            margin-right: 12px;
+            font-size: 1.1em;
+            width: 28px;
+            text-align: center;
+        }
+
+        pre {
+            font-family: 'Fira Code', monospace;
+            background: #f8f9fb;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.1em;
+            margin-bottom: 1em;
+            font-size: 0.92rem;
+            white-space: pre-wrap;
+            border-radius: 0 4px 4px 0;
+            overflow-x: auto;
+            line-height: 1.5;
+            tab-size: 2;
+        }
+
+        .output-box {
+            background: #ffffff;
+            border: 1px solid #e3e8f0;
+            border-radius: 8px;
+            padding: 1.2em;
+            font-size: 0.95rem;
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05);
+            min-height: 70px;
+            margin-top: 0.8rem;
+        }
+
+        
+
+        
+
+        .note {
+            background-color: #e3f2fd;
+            border-left: 4px solid var(--primary-color);
+            padding: 0.9em;
+            margin: 1em 0;
+            font-size: 0.9rem;
+            border-radius: 0 4px 4px 0;
+            line-height: 1.5;
+        }
+
+        .deprecated {
+            background-color: #ffefef;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            color: #6c757d;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .tag-count {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25em 0.8em;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .badge-new {
+            background: var(--success-color);
+            font-size: 0.7rem;
+            padding: 0.25em 0.6em;
+            margin-left: 10px;
+            vertical-align: super;
+        }
+
+        .badge-deprecated {
+            background: #e74c3c;
+            font-size: 0.7rem;
+            padding: 0.25em 0.6em;
+            margin-left: 10px;
+            vertical-align: super;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.3rem;
+            }
+
+            .subtitle {
+                font-size: 1.05rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .tag-category {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HTML Tags Reference</h1>
+
+
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+
+            <!-- HTML -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-code"></i> &lt;html&gt;</div>
+                    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                   
+                    <div class="note">Root element of an HTML document. All content must be contained within this tag.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Head -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-heading"></i> &lt;head&gt;</div>
+                    <pre>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</pre>
+                    <div class="note">Container for metadata, page title, stylesheets, and scripts. Not visible to
+                        users.</div>
+                </div>
+            </div>
+
+            <!-- Body -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-file-alt"></i> &lt;body&gt;</div>
+                    <pre>&lt;body&gt;
+  &lt;h1&gt;My Web Page&lt;/h1&gt;
+  &lt;p&gt;This is the main content area.&lt;/p&gt;
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</pre>
+                    <div class="note">Contains all visible content of the web page. Only one &lt;body&gt; per document.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-square"></i> &lt;div&gt; <span
+                            class="badge-new">HTML5</span></div>
+                    <pre>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col"&gt;Column 1&lt;/div&gt;
+    &lt;div class="col"&gt;Column 2&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    
+                    <div class="output-box">
+                        <div
+                            style="background: #f0f4f8; padding: 15px; border-radius: 8px; border: 1px dashed #4361ee;">
+                            <div style="display: flex; gap: 15px; margin-bottom: 10px;">
+                                <div style="flex: 1; background: white; padding: 10px; border-radius: 4px;">Column 1
+                                </div>
+                                <div style="flex: 1; background: white; padding: 10px; border-radius: 4px;">Column 2
+                                </div>
+                            </div>
+                            <div style="background: white; padding: 10px; border-radius: 4px; text-align: center;">
+                                Footer</div>
+                        </div>
+                    </div>
+                    <div class="note">Generic container for flow content. Used for layout and styling.</div>
+                </div>
+            </div>
+
+
+            <!-- Headings -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-heading"></i> &lt;h1&gt;-&lt;h6&gt;</div>
+                    <pre>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Section Heading&lt;/h2&gt;
+&lt;h3&gt;Subsection&lt;/h3&gt;
+&lt;h4&gt;Minor Heading&lt;/h4&gt;
+&lt;h5&gt;Small Heading&lt;/h5&gt;
+&lt;h6&gt;Smallest Heading&lt;/h6&gt;</pre>
+                    <div class="output-box">
+                        <h1 style="font-size: 2em; margin: 0.3em 0; color: var(--primary-color);">Main Title</h1>
+                        <h2 style="font-size: 1.6em; margin: 0.3em 0;">Section Heading</h2>
+                        <h3 style="font-size: 1.3em; margin: 0.3em 0;">Subsection</h3>
+                        <h4 style="font-size: 1.1em; margin: 0.3em 0;">Minor Heading</h4>
+                        <h5 style="font-size: 0.95em; margin: 0.3em 0;">Small Heading</h5>
+                        <h6 style="font-size: 0.85em; margin: 0.3em 0; color: #6c757d;">Smallest Heading</h6>
+                    </div>
+                    <div class="note">Headings define the structure of your document. Use only one &lt;h1&gt; per page.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paragraph -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-paragraph"></i> &lt;p&gt;</div>
+                    <pre>&lt;p&gt;This is a standard paragraph.&lt;/p&gt;
+&lt;p class="highlight"&gt;This paragraph has a custom class.&lt;/p&gt;
+&lt;p style="text-align: center; color: #4361ee;"&gt;
+  Centered and colored text.
+&lt;/p&gt;</pre>
+                   
+                    <div class="output-box">
+                        <p>This is a standard paragraph.</p>
+                        <p style="background-color: #e3f2fd; padding: 8px; border-radius: 4px;">This paragraph has a
+                            custom class.</p>
+                        <p style="text-align: center; color: #4361ee;">Centered and colored text.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bold -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-bold"></i> &lt;b&gt;, &lt;strong&gt;</div>
+                    <pre>&lt;p&gt;
+  &lt;b&gt;Bold text&lt;/b&gt; for stylistic purposes. 
+  &lt;strong&gt;Important text&lt;/strong&gt; for semantic emphasis.
+&lt;/p&gt;</pre>
+                    <div class="output-box">
+                        <p><b>Bold text</b> for stylistic purposes. <strong>Important text</strong> for semantic
+                            emphasis.</p>
+                    </div>
+                    <div class="note">&lt;b&gt; is for styling, &lt;strong&gt; indicates semantic importance.</div>
+                </div>
+            </div>
+
+            <!-- Italic -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-italic"></i> &lt;i&gt;, &lt;em&gt;</div>
+                    <pre>&lt;p&gt;
+  &lt;i&gt;Italic text&lt;/i&gt; for stylistic purposes. 
+  &lt;em&gt;Emphasized text&lt;/em&gt; for semantic emphasis.
+&lt;/p&gt;</pre>
+                    <div class="output-box">
+                        <p><i>Italic text</i> for stylistic purposes. <em>Emphasized text</em> for semantic emphasis.
+                        </p>
+                    </div>
+                    <div class="note">&lt;i&gt; is for styling, &lt;em&gt; indicates semantic emphasis.</div>
+                </div>
+            </div>
+
+            <!-- Underline -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-underline"></i> &lt;u&gt;</div>
+                    <pre>&lt;p&gt;
+  This is &lt;u&gt;underlined text&lt;/u&gt;. 
+  Avoid using for non-hyperlinks to prevent confusion.
+&lt;/p&gt;</pre>
+                    <div class="output-box">
+                        <p>This is <u>underlined text</u>. Avoid using for non-hyperlinks to prevent confusion.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strike -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-strikethrough"></i> &lt;strike&gt;, &lt;del&gt;</div>
+                    <pre>&lt;p&gt;
+  &lt;strike&gt;Strikethrough text&lt;/strike&gt; (deprecated)
+  &lt;del&gt;Deleted text&lt;/del&gt; (preferred)
+&lt;/p&gt;</pre>
+                    <div class="output-box">
+                        <p><strike>Strikethrough text</strike> (deprecated) <del>Deleted text</del> (preferred)</p>
+                    </div>
+                    <div class="note deprecated">&lt;strike&gt; is deprecated in HTML5. Use &lt;del&gt; instead.</div>
+                </div>
+            </div>
+
+            <!-- Font -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-font"></i> &lt;font&gt;</div>
+                    <pre>&lt;font face="Arial" size="4" color="red"&gt;
+  This is styled text using the font tag.
+&lt;/font&gt;</pre>
+                   
+
+                    <div class="output-box">
+                        <font face="Arial" size="4" color="red">This is styled text using the font tag.</font>
+                    </div>
+                    <div class="note deprecated">Deprecated in HTML5. Use CSS styling instead.</div>
+                </div>
+            </div>
+
+            <!-- Big/Small -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-text-height"></i> &lt;big&gt;, &lt;small&gt;</div>
+                    <pre>&lt;p&gt;
+  &lt;big&gt;Big text&lt;/big&gt; (deprecated)
+  &lt;small&gt;Small text&lt;/small&gt; (for side comments)
+&lt;/p&gt;</pre>
+                    <div class="output-box">
+                        <p><big>Big text</big> (deprecated) <small>Small text</small> (for side comments)</p>
+                    </div>
+                    <div class="note deprecated">&lt;big&gt; is deprecated in HTML5. Use CSS font-size instead.</div>
+                </div>
+            </div>
+
+            <!-- Line Break -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-level-down-alt"></i> &lt;br&gt;</div>
+                    <pre>Line 1&lt;br&gt;
+Line 2&lt;br&gt;
+Line 3</pre>
+                    <div class="output-box">Line 1<br>Line 2<br>Line 3</div>
+                    <div class="note">Creates a line break in text. Avoid using for layout purposes.</div>
+                </div>
+            </div>
+
+            <!-- Horizontal Rule -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-minus"></i> &lt;hr&gt;</div>
+                    <pre>&lt;hr&gt;
+&lt;hr class="dashed"&gt;
+&lt;hr style="height: 4px; background: #4361ee;"&gt;</pre>
+                    
+                    <div class="output-box">
+                        <hr style="margin: 1em 0;">
+                        <hr style="border: 1px dashed #ccc; margin: 1em 0;">
+                        <hr style="height: 4px; background: #4361ee; border: none; margin: 1em 0;">
+                    </div>
+                    <div class="note">Thematic break between content sections. Style with CSS.</div>
+                </div>
+            </div>
+
+            <!-- Span -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-i-cursor"></i> &lt;span&gt;</div>
+                    <pre>&lt;p&gt;
+  This is &lt;span style="color: red;"&gt;red text&lt;/span&gt; 
+  and &lt;span class="highlight"&gt;highlighted text&lt;/span&gt;.
+&lt;/p&gt;</pre>
+                        
+                    <div class="output-box">
+                        <p>This is <span style="color: red;">red text</span> and <span
+                                style="background-color: #ffec99; padding: 2px 4px; border-radius: 3px;">highlighted
+                                text</span>.</p>
+                    </div>
+                    <div class="note">Generic inline container for styling or scripting.</div>
+                </div>
+            </div>
+
+
+            <!-- Unordered List -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-list-ul"></i> &lt;ul&gt;</div>
+                    <pre>&lt;ul&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+  &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="no-bullets"&gt;
+  &lt;li&gt;Custom styled list&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                   
+                    <div class="output-box">
+                        <ul style="margin-top: 0;">
+                            <li>First item</li>
+                            <li>Second item</li>
+                            <li>Third item</li>
+                        </ul>
+                        <ul style="list-style: none; padding-left: 0; margin-top: 0;">
+                            <li><i class="fas fa-check-circle" style="color: green; margin-right: 8px;"></i> Custom
+                                styled list</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ordered List -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-list-ol"></i> &lt;ol&gt;</div>
+                    <pre>&lt;ol&gt;
+  &lt;li&gt;First step&lt;/li&gt;
+  &lt;li&gt;Second step&lt;/li&gt;
+  &lt;li&gt;Third step&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type="a" start="3"&gt;
+  &lt;li&gt;Starts at c&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol reversed&gt;
+  &lt;li&gt;Counts down&lt;/li&gt;
+&lt;/ol&gt;</pre>
+                    
+                    <div class="output-box">
+                        <ol style="margin-top: 0;">
+                            <li>First step</li>
+                            <li>Second step</li>
+                            <li>Third step</li>
+                        </ol>
+                        <ol type="a" start="3" style="margin-top: 0;">
+                            <li>Starts at c</li>
+                            <li>Next item</li>
+                        </ol>
+                        <ol reversed style="margin-top: 0;">
+                            <li>Counts down</li>
+                            <li>From here</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Anchor -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-link"></i> &lt;a&gt;</div>
+                    <pre>&lt;a href="https://example.com" target="_blank"&gt;
+  External Link
+&lt;/a&gt;
+
+&lt;a href="mailto:contact@example.com"&gt;
+  Email Link
+&lt;/a&gt;
+
+&lt;a href="#section-id" class="btn"&gt;
+  Page Anchor
+&lt;/a&gt;</pre>
+                    
+                    <div class="output-box">
+                        <a href="https://example.com" target="_blank"
+                            style="color: #4361ee; text-decoration: none; border-bottom: 1px dashed #4361ee; margin-right: 15px;">External
+                            Link</a>
+                        <a href="mailto:contact@example.com"
+                            style="color: #4361ee; text-decoration: none; border-bottom: 1px dashed #4361ee; margin-right: 15px;">Email
+                            Link</a>
+                        <a href="#section-id"
+                            style="display: inline-block; background: #4361ee; color: white; padding: 5px 12px; border-radius: 4px; text-decoration: none;">Page
+                            Anchor</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-image"></i> &lt;img&gt;</div>
+                    <pre>&lt;img src="image.jpg" alt="Description" 
+  width="400" height="300" loading="lazy"&gt;
+  
+&lt;img srcset="small.jpg 480w, medium.jpg 800w"
+  sizes="(max-width: 600px) 480px, 800px"
+  src="medium.jpg" alt="Responsive image"&gt;</pre>
+                  
+                    <div class="output-box">
+                        <div
+                            style="background: #f8f9fa; border: 1px dashed #ccc; border-radius: 8px; padding: 15px; text-align: center;">
+                            <div
+                                style="margin: 0 auto; width: 200px; height: 150px; background: linear-gradient(135deg, #4361ee, #3a0ca3); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: white;">
+                                Image Placeholder
+                            </div>
+                            <p style="margin-top: 10px; font-size: 0.9em; color: #6c757d;">Description</p>
+                        </div>
+                    </div>
+                    <div class="note">Always include meaningful alt text for accessibility.</div>
+                </div>
+            </div>
+
+
+            <!-- Table -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-table"></i> &lt;table&gt;</div>
+                    <pre>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;John&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+                    
+                    <div class="output-box">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="background-color: #4361ee; color: white;">
+                                    <th style="padding: 8px; border: 1px solid #2a4fcc;">Name</th>
+                                    <th style="padding: 8px; border: 1px solid #2a4fcc;">Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 8px; border: 1px solid #eee;">John</td>
+                                    <td style="padding: 8px; border: 1px solid #eee;">30</td>
+                                </tr>
+                                <tr style="background-color: #f8f9fa;">
+                                    <td style="padding: 8px; border: 1px solid #eee;">Sarah</td>
+                                    <td style="padding: 8px; border: 1px solid #eee;">28</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Form -->
+            <div class="col">
+                <div class="glass-card">
+                    <div class="card-title"><i class="fas fa-window-restore"></i> &lt;form&gt;</div>
+                    <pre>&lt;form action="/submit" method="POST"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+  
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</pre>
+                    
+                    <div class="output-box">
+                        <form style="max-width: 300px;">
+                            <div style="margin-bottom: 10px;">
+                                <label for="name"
+                                    style="display: block; margin-bottom: 5px; font-weight: 500;">Name:</label>
+                                <input type="text" id="name" name="name"
+                                    style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                            <button type="submit"
+                                style="background: #4361ee; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input -->
+            <div class="col" style="width:600px;">
+                <div class="glass-card">
+                    <div class="card-title">
+                        <i class="fas fa-keyboard"></i> &lt;input&gt;
+                    </div>
+                    <pre>
+&lt;input type="text" placeholder="Text"&gt;
+&lt;input type="email" placeholder="Email"&gt;
+&lt;input type="password" placeholder="Password"&gt;
+&lt;input type="number" placeholder="Number"&gt;
+&lt;input type="date"&gt;
+&lt;input type="checkbox" checked&gt;
+&lt;input type="radio" name="group"&gt;
+&lt;input type="file"&gt;
+&lt;input type="submit" value="Send"&gt;
+    </pre>
+
+                    
+
+                    <div class="output-box">
+                        <form style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                            <input type="text" placeholder="Text"
+                                style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                            <input type="email" placeholder="Email"
+                                style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                            <input type="password" placeholder="Password"
+                                style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                            <input type="number" placeholder="Number"
+                                style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                            <input type="date" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+
+                            <label style="display: flex; align-items: center; gap: 6px;">
+                                <input type="checkbox" checked> Checkbox
+                            </label>
+
+                            <label style="display: flex; align-items: center; gap: 6px;">
+                                <input type="radio" name="group"> Radio
+                            </label>
+
+                            <input type="file" style="padding: 4px; font-size: 0.9em;" />
+
+                            <input type="submit" value="Send"
+                                style="grid-column: span 2; background-color: #4361ee; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer;">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="scroll-top" id="scrollTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+
+        <script>
+            // Scroll to top functionality
+            const scrollTopBtn = document.getElementById('scrollTop');
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.classList.add('show');
+                } else {
+                    scrollTopBtn.classList.remove('show');
+                }
+            });
+
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+</body>
+
+</html>
