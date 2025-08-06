@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Flip Book</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0d0d0d;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .flipbookkk {
+            margin-top: 15vh;
+            margin-bottom: 5vh;
+            padding: 0 20px;
+        }
+
+        .flipbookkk-title {
+            color: #ffa200;
+            text-align: center;
+            font-size: 5vw;
+            font-weight: 900;
+            line-height: 1.2;
+            text-shadow: 1px 3px 0px #373737;
+            margin-bottom: 20px;
+        }
+
+        .flipbook-card {
+            perspective: 1200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flipbook-inner {
+            transition: transform 0.6s ease;
+            transform-style: preserve-3d;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .flipbook-card:hover .flipbook-inner,
+        .flipbook-card:active .flipbook-inner {
+            transform: rotateY(-15deg) rotateX(5deg) scale(1.02);
+        }
+
+        iframe {
+            width: 100%;
+            height: 480px;
+            border: none;
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .flipbookkk-title {
+                font-size: 2.5vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Flipbook Section -->
+<div class="flipbookkk">
+    <h3 class="flipbookkk-title">Denotation & Connotation</h3>
+    <div class="flipbook-card">
+        <div class="flipbook-inner">
+            <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=fu56p2gym" seamless scrolling="no" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="flipbookkk">
+    <h3 class="flipbookkk-title">Compositions & Narratives</h3>
+    <div class="flipbook-card">
+        <div class="flipbook-inner">
+            <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=fxcj4pmko" seamless scrolling="no" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="flipbookkk">
+    <h3 class="flipbookkk-title">Patterns & Types (Fonts)</h3>
+    <div class="flipbook-card">
+        <div class="flipbook-inner">
+            <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=ft95r3fmz" seamless scrolling="no" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<!-- End Flipbook Section -->
+
+</body>
+</html>
