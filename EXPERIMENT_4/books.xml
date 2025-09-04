@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookstore SYSTEM "books.dtd">
+<bookstore>
+    <book>
+        <title>Introduction to Artificial Intelligence</title>
+        <author>Stuart Russell</author>
+        <isbn>978-0134610993</isbn>
+        <publisher>Pearson</publisher>
+        <edition>3rd</edition>
+        <price>45.99</price>
+    </book>
+    <book>
+        <title>Clean Code</title>
+        <author>Robert Martin</author>
+        <isbn>978-0132350884</isbn>
+        <publisher>Prentice Hall</publisher>
+        <edition>1st</edition>
+        <price>37.50</price>
+    </book>
+    <book>
+        <title>Database System Concepts</title>
+        <author>Abraham Silberschatz</author>
+        <isbn>978-1260084504</isbn>
+        <publisher>McGraw Hill</publisher>
+        <edition>7th</edition>
+        <price>65.00</price>
+    </book>
+    <book>
+        <title>Artificial Intelligence: A Modern Approach</title>
+        <author>Peter Norvig</author>
+        <isbn>978-0136042594</isbn>
+        <publisher>Pearson</publisher>
+        <edition>4th</edition>
+        <price>59.99</price>
+    </book>
+</bookstore>

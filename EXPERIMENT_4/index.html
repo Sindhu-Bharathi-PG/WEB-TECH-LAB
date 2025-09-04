@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Information</title>
+  <script>
+    function loadXMLDoc(filename) {
+      let xhttp = new XMLHttpRequest();
+      xhttp.open("GET", filename, false);
+      xhttp.send();
+      return xhttp.responseXML;
+    }
+
+    function displayBooks() {
+      let xml = loadXMLDoc("books.xml");
+      let xsl = loadXMLDoc("books.xsl");
+
+      if (window.ActiveXObject || "ActiveXObject" in window) {
+        document.getElementById("output").innerHTML =
+          xml.transformNode(xsl);
+      } else {
+        let xsltProcessor = new XSLTProcessor();
+        xsltProcessor.importStylesheet(xsl);
+        let resultDocument = xsltProcessor.transformToFragment(xml, document);
+        document.getElementById("output").appendChild(resultDocument);
+      }
+    }
+  </script>
+</head>
+<body onload="displayBooks()">
+  <div id="output"></div>
+</body>
+</html>
